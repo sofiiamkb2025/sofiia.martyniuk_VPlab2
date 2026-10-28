@@ -1,0 +1,33 @@
+import Header from './components/Header';
+import About from './components/About';
+import Education from './components/Education';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Footer from './components/Footer';
+
+function App() {
+  return (
+    <div className="min-h-screen bg-slate-950 px-4 py-8 text-slate-100">
+      <div className="mx-auto max-w-5xl space-y-8">
+        <Header />
+        
+        {/* Збільшили загальний відступ між колонками до gap-8 */}
+        <main className="mt-8 grid gap-8 grid-cols-1 md:grid-cols-[280px_1fr]">
+          <aside className="space-y-8">
+            <Education />
+            <Skills />
+          </aside>
+          
+          <div className="space-y-8">
+            <About />
+            <Experience />
+          </div>
+        </main>
+
+        <Footer />
+      </div>
+    </div>
+  );
+}
+
+export default App;
