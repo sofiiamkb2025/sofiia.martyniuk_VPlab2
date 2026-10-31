@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from './components/Header';
 import About from './components/About';
 import Education from './components/Education';
@@ -7,23 +8,19 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-950 px-4 py-8 text-slate-100">
-      <div className="mx-auto max-w-5xl space-y-8">
+    <div className="min-h-screen bg-[#1a0508] text-gray-100 py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto space-y-6">
         <Header />
-        
-        {/* Збільшили загальний відступ між колонками до gap-8 */}
-        <main className="mt-8 grid gap-8 grid-cols-1 md:grid-cols-[280px_1fr]">
-          <aside className="space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="space-y-6">
             <Education />
             <Skills />
-          </aside>
-          
-          <div className="space-y-8">
+          </div>
+          <div className="space-y-6">
             <About />
             <Experience />
           </div>
-        </main>
-
+        </div>
         <Footer />
       </div>
     </div>
